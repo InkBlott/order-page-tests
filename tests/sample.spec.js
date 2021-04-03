@@ -14,6 +14,10 @@ const pageSelectors = {
   }
 };
 
+const pageText={
+    privacyBeyondButtonTextRefuse:'No thanks'
+}
+
 describe('Surfshark order page tests', function () {
     this.timeout(10000);
     let page;
@@ -31,7 +35,7 @@ describe('Surfshark order page tests', function () {
     it('should change privacy button text on click', async function () {
         await page.waitForSelector(pageSelectors.privacyBeyondButton);
         await page.click(pageSelectors.privacyBeyondButton);
-        expect(await page.$eval(pageSelectors.privacyBeyondButton, e => e.innerHTML)).to.be.eql('No thanks');
+        expect(await page.$eval(pageSelectors.privacyBeyondButton, e => e.innerHTML)).to.be.eql(pageText.privacyBeyondButtonTextRefuse);
     });
   
     it('should change all currencies on the page', async function() {
