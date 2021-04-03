@@ -5,7 +5,7 @@ const globalVariables = _.pick(global, ['browser', 'expect']);
 
 // puppeteer options
 const opts = {
-  headless: false,
+  headless: true,
 };
 
 // expose variables
