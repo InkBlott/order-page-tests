@@ -1,0 +1,17 @@
+{
+  "name": "puppeteer-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/setup.js --recursive tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "lodash": "^4.17.21",
+    "mocha": "^8.3.2",
+    "puppeteer": "^8.0.0"
+  }
+}
