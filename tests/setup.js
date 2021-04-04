@@ -5,11 +5,12 @@ const globalVariables = _.pick(global, ['browser', 'expect']);
 
 // puppeteer options
 const opts = {
-  headless: true,
+  headless: false,
 };
 
 // expose variables
 before (async function () {
+  this.timeout(10000);
   global.expect = expect;
   global.browser = await puppeteer.launch(opts);
 });
